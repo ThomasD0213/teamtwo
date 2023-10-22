@@ -11,7 +11,7 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-@app.route("/")
+@app.route("/getProfiles")
 def hello():
     conn = get_db_connection()
     cursor = conn.cursor()
