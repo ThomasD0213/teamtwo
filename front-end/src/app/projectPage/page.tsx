@@ -1,9 +1,11 @@
 'use client';
 import React from 'react'
-import {Badge, Stack, Button, Container, Row, Col, Image} from "../../../node_modules/react-bootstrap/esm/index";
+import {Badge, Stack, Button, Container, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
+import Image from 'next/image'
 import './project.css';
 import team from './images/working-together.png';
 import Back from '../../../Components/back';
+import hackathonpic from '../../../public/hackathonpic.png'
 
 const projectPage = () => {
   return (
@@ -16,7 +18,7 @@ const projectPage = () => {
             <Row>
                 <Col>
                 <Stack style={{backgroundColor:'#000000', color:"#FFFFFF", borderRadius:'10px'}}>
-                <Image alt = "Team working together" src={"https://events.mlh.io/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdDhiIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--03805e13c230b496119dc6ee2804db911da09945/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2QzNKbGMybDZaVWtpRGpFeU1EQjROakF3SVFZN0JsUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--bb74e2531ca3e0ee463ad8c55d04110fcf863b74/Copy%20of%20Hackathon.png"} width={250} id="center"/>
+                <Image alt = "Team working together" src={hackathonpic} height={250} width={250} id="center"/>
                 <h1><b>DU/MSU Hackathon</b></h1>
                 </Stack>
                 </Col>
