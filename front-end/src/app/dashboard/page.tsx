@@ -7,6 +7,7 @@ import {Badge, Stack, Button, Container, Row, Col, Card, ListGroup} from "../../
 import { Dropdown, Nav, NavDropdown, NavItem, NavItemProps } from 'react-bootstrap';
 import MyCard from '../../../Components/myCard'
 import Bar from '../../../Components/bar';
+import Link from 'next/link';
 
 
 
@@ -20,22 +21,24 @@ function dashboard() {
         <Tab eventKey={1} title="Find A Project">
         <div id='divBottom'>
             <div id='scrollContain'>
-                <div>
-                  <Card bg='dark' style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="../../../projectphoto.png" alt="project photo" />
-                    <Card.Body>
-                        <Card.Title>Marketing Project</Card.Title>
-                        <Card.Text>
-                        University of Denver
-                        </Card.Text>
-                    </Card.Body>
-                    <ListGroup variant="dark" className="list-group-flush">
-                        <ListGroup.Item className="fw-bold">Justin Denver</ListGroup.Item>
-                        <ListGroup.Item>Business Student</ListGroup.Item>
-                    </ListGroup>
-                    <Card.Body>
-                        <Card.Link href="#">Save</Card.Link>
-                    </Card.Body>
+                <div >
+                    <Card style={{ width: '18rem' }}>
+                    <Link href="/projectPage">
+                        <Card.Img variant="top" src="../../../hackathonpic.png" alt="hack photo" />
+                        <Card.Body>
+                            <Card.Title>Hackathon 2023</Card.Title>
+                            <Card.Text>
+                            University of Denver
+                            </Card.Text>
+                        </Card.Body>
+                        <ListGroup variant="dark" className="list-group-flush">
+                            <ListGroup.Item className="fw-bold">Justin Denver</ListGroup.Item>
+                            <ListGroup.Item>Computer Student</ListGroup.Item>
+                        </ListGroup>
+                        <Card.Body>
+                            <Card.Link href="#">Save</Card.Link>
+                        </Card.Body>
+                    </Link>
                     </Card> 
                 </div>
                 enim nihil quia laudantium architecto, velit blanditiis mollitia saepe repellat iste natus ipsam! Dolor repellat illo atque ut ducimus impedit similique porro. Delectus sed nihil voluptas ducimus perspiciatis. Ex cupiditate ipsum minima veritatis
@@ -47,8 +50,42 @@ function dashboard() {
         <div id='divBottom'>
             <div id='scrollContain'>
                 <div>
-                    <MyCard />
-                    <MyCard />
+                <Row className="listed-profs">
+                    <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="../../../projectphoto.png" alt="project photo" />
+                    <Card.Body>
+                        <Card.Title>Hackathon 2023</Card.Title>
+                        <Card.Text>
+                        University of Denver
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup variant="dark" className="list-group-flush">
+                        <ListGroup.Item className="fw-bold">Justin Denver</ListGroup.Item>
+                        <ListGroup.Item>Computer Student</ListGroup.Item>
+                    </ListGroup>
+                    <Card.Body>
+                        <Card.Link href="#">Delete</Card.Link>
+                    </Card.Body>
+                    </Card>  
+                <Col classname="listed-profs">
+                    <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="../../../projectphoto.png" alt="project photo" />
+                    <Card.Body>
+                        <Card.Title>Hackathon 2023</Card.Title>
+                        <Card.Text>
+                        University of Denver
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup variant="dark" className="list-group-flush">
+                        <ListGroup.Item className="fw-bold">Justin Denver</ListGroup.Item>
+                        <ListGroup.Item>Computer Student</ListGroup.Item>
+                    </ListGroup>
+                    <Card.Body>
+                        <Card.Link href="#">Delete</Card.Link>
+                    </Card.Body>
+                    </Card>   
+                </Col>
+                </Row>
                 </div>
                 enim nihil quia laudantium architecto, velit blanditiis mollitia saepe repellat iste natus ipsam! Dolor repellat illo atque ut ducimus impedit similique porro. Delectus sed nihil voluptas ducimus perspiciatis. Ex cupiditate ipsum minima veritatis
             </div>
