@@ -1,0 +1,39 @@
+#backButton{
+    background-color:transparent;
+    border-color: transparent;
+    padding: 10px;
+    float:left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#header{
+    background-color: #fffaeb;
+    width:100vw;
+    height:100px;
+    margin:0px;
+}
+
+/* .BigRectangle{
+    background-color: #130e01;
+}
+
+#Contact{
+    background-color: orange;
+}
+
+#MoreInfo{
+    background-color: pink;
+} */
+
+body {
+    background-color: #fffaeb;
+    color: #130e01;
+    padding: 0px;
+    font-family: 'kosugi';
+    text-align: center;
+  }
+
+#topRectange{
+    background-color:#fffaeb;
+}

@@ -1,34 +1,22 @@
 'use client';
 import React from 'react'
-import {Badge, Button, Stack, Navbar, Container, Nav, NavDropdown} from "../../../node_modules/react-bootstrap/esm/index";
+import {Badge, Stack, Button, Container, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
+import './project.css';
+import Image from 'next/image';
+import arrow from './images/leftArrow.png';
 
 const projectPage = () => {
   return (
+   <main>
+   <div id="header">
+        <Button id='backButton' href="/dashboard"><Image 
+        alt = "Back arrow"
+        src={arrow}
+        width={20} 
+        /></Button>
+    </div>
     <div>
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-      <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-        <Navbar.Brand href="#home">Our Beautiful App Name</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Little Bell</Nav.Link>
-            <Nav.Link href="#link">My Avatar</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-        <h1>
+        {/* <h1>
             Name of Project
         </h1>
 
@@ -40,8 +28,40 @@ const projectPage = () => {
             <text><b>Project Timeline:</b> Finish by Nov 23 2023 {"\n"}</text>
             <text><b>Budget:</b> N/A {"\n"}</text>
             <text><b>Contact:</b> John.Smith@du.edu {"\n"}</text>
-        </Stack>
+        </Stack> */}
+
+        <Container fluid>
+            <Row>
+                <Col ><Container id = "TopRectangle"><b>PROJECT TITLE</b></Container></Col>
+                <Col id = "Contact">
+                    <Stack>
+                    <p><b>Contact Me:</b></p>
+                    <p>John.Smith@university.edu</p>
+                    </Stack>
+                </Col>
+            </Row>
+            <Row>
+                <Col id = "BottomRectangle">
+                    <Stack>
+                        <p>OPEN/CLOSED</p>
+                        <p style={{color:'#CF4307'}}><b>Owner</b></p>
+                        <p>John Smith</p>
+                        <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
+                        <p>Mad react skills</p>
+                        <p style={{color:'#CF4307'}}><b>Project Timeline</b></p>
+                        <p>Finish by Nov 23 2023</p>
+                    </Stack>
+                </Col>
+                <Col id = "Description">
+                    <Stack>
+                        <p><b>Details:</b></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </Stack>
+                </Col>
+            </Row>
+        </Container>
     </div>
+    </main>
   )
 }
 
