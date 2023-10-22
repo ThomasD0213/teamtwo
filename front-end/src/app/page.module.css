@@ -1,10 +1,10 @@
- :root{
+ /* root{
   --text-color: #130e01;
   --background-color: #fffaeb;
   --primary-color: #060606;
   --secondary-color: #ffcb2d;
   --accent-color: #cf4307;
-}  
+}   */
 
 .main {
   display: flex;
@@ -257,7 +257,39 @@
 }
 
 .vertical-rotate {
-  animation: rotateVertical 1s linear;
+  animation: rotateVertical 2s linear;
   animation-fill-mode: forwards;
+}
+
+.Home{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+
+/* h1 {
+  font-size: 75px;
+} */
+
+@media screen and (max-width: 768px) {
+  .h1 {
+    font-size: 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .h1 {
+    font-size: 1em;
+  }
 }
 /* LANDING PAGE*/
