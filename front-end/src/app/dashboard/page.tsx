@@ -64,7 +64,7 @@ function dashboard() {
                         <ListGroup.Item>Computer Student</ListGroup.Item>
                     </ListGroup>
                     <Card.Body>
-                        <Card.Link href="#">Save</Card.Link>
+                        <Card.Link href="#">Delete</Card.Link>
                     </Card.Body>
                     </Card>  
                 <Col classname="listed-profs">
@@ -81,7 +81,7 @@ function dashboard() {
                         <ListGroup.Item>Computer Student</ListGroup.Item>
                     </ListGroup>
                     <Card.Body>
-                        <Card.Link href="#">Save</Card.Link>
+                        <Card.Link href="#">Delete</Card.Link>
                     </Card.Body>
                     </Card>   
                 </Col>

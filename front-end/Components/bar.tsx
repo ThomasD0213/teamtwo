@@ -18,7 +18,7 @@ const Bar = () => {
                         </Navbar.Collapse>
                         </Col>
                         <Col>
-                        <Navbar.Brand href='/'>Dashboard</Navbar.Brand>
+                        <Navbar.Brand className="primary-text" href='/'>Dashboard</Navbar.Brand>
                         </Col>
 
                     </Row>
