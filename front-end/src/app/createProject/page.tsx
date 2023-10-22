@@ -13,7 +13,38 @@ function FormExample() {
   const [validated, setValidated] = useState(false);
   const [selected, setSelected] = useState([]);
 
-  const handleSubmit = (event) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    owner: "",
+    details: "",
+    skills: "",
+    paid: 0,
+    timeline: "",
+    status: "",
+    contact: "",
+  })
+
+  const [_name, setName] = useState("")
+  const [_owner, setOwner] = useState("")
+  const [_details, setDescription] = useState("")
+  const [_skills, setSkills] = useState("")
+  const [_paid, setPaid] = useState("")
+  const [_timeline, setTimeline] = useState("")
+  const [_status, setStatus] = useState("")
+  const [_contact, setContact] = useState("")
+
+  let stuff = {
+    name: _name,
+    owner: _owner,
+    details: _details,
+    skills: _skills,
+    paid: _paid,
+    timeline: _timeline,
+    status: _status,
+    contact: _status
+  }
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -21,24 +52,31 @@ function FormExample() {
     }
 
     setValidated(true);
-  };
+
+    const response = await fetch('http://127.0.0.1:5000/addProject', {
+      method: 'POST',
+      headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"},
+      body: JSON.stringify(stuff),
+    });
+  }
 
   return (
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom01">
+        <Form.Group as={Col} md="4" controlId="validationCustom01" onChange={(e:any) => setName(e.target.value)}>
           <Form.Label>Project Title</Form.Label> {/* text box title */}
           <Form.Control
             required
             type="text"
             placeholder="Enter your project title" // when there is nothing typed in, this is shown in the textbox
-            defaultValue="Project X" // hard coded default value.
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom02">
+        <Form.Group as={Col} md="4" controlId="validationCustom02" onChange={(e:any) => setOwner(e.target.value)}>
           <Form.Label>Details</Form.Label>
           <Form.Control
             as="textarea"
@@ -46,24 +84,18 @@ function FormExample() {
             rows={8}
             type="text"
             placeholder="Enter project details"
-            defaultValue="Our latest project, Project X, is a revolutionary 
-            software application designed to transform the way businesses manage 
-            their data. It offers a sleek and intuitive user interface, powerful 
-            data analysis tools, and robust security features. With Project X, 
-            businesses can streamline their operations, make data-driven decisions, 
-            and enhance productivity"
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom05">
+        <Form.Group as={Col} md="4" controlId="validationCustom05" onChange={(e:any) => setSkills(e.target.value)}>
           <Form.Label>Skills</Form.Label>
           <TagsInput
             value={selected}
             onChange={setSelected}
             name="skills"
-            placeHolder="Add a skill and press 'Enter'"  //this is probably not the 
+            placeHolder="Add a skill and press 'Enter'"
             onBlur={undefined} 
             separators={undefined} 
             disableBackspaceRemove={undefined} 
@@ -74,14 +106,11 @@ function FormExample() {
             beforeAddValidate={undefined} 
             onKeyUp={undefined} 
             classNames={undefined}            />          
-          {/* Instead of doing a textbox, I'd suggest a tag input but 
-          from what I see there isn't a react bootstrap component 
-          that we could use, so this could take some time to implement. */}
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="2" controlId="validationCustom04">
-          <Form.Label>Budget</Form.Label>
+        <Form.Group as={Col} md="2" controlId="validationCustom04" onChange={(e:any) => setPaid(e.target.value)}>
+          <Form.Label>Budget</Form.Label>  {/** set to Paid and change to drop down with options yes or no */}
           <InputGroup className="mb-3">
             <InputGroup.Text>$</InputGroup.Text>
             <Form.Control type="text" placeholder="Enter your budget" required />
@@ -93,7 +122,7 @@ function FormExample() {
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="3" controlId="validationCustom04">
+        <Form.Group as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setTimeline(e.target.value)}>
           <Form.Label>Timeline</Form.Label>
           <Form.Control type="text" placeholder="Enter your timeline" required />
           <Form.Control.Feedback type="invalid">
@@ -102,15 +131,13 @@ function FormExample() {
         </Form.Group>
       </Row>
       <Row className="mb-3">
-      <Col xs={6}>
-      <Form.Label htmlFor="basic-url">Public Links</Form.Label>
-      <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon3">
-          https://example.com/users/
-        </InputGroup.Text>
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
-      </InputGroup>
-      </Col>
+        <Form.Group as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setContact(e.target.value)}>
+          <Form.Label>Contact</Form.Label>
+          <Form.Control type="text" placeholder="Enter your email or phone number" required />
+          <Form.Control.Feedback type="invalid">
+            Please provide a valid contact information.
+          </Form.Control.Feedback>
+        </Form.Group>
       </Row>
       <Button type="submit">Submit</Button>
     </Form>
