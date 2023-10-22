@@ -5,7 +5,7 @@ import { Container, Row, Navbar, NavbarBrand, Col, Nav, Image, Button} from '../
 const Bar = () => {
     return (
         <main>
-            <Navbar expand='xxxxxl' className='bg-body-tertiary'>
+            <Navbar expand='xxxxxl' className='background-color'>
             <Container className='justify-content-between'>
                     <Row>
                         <Col>

@@ -44,7 +44,7 @@ function dashboard() {
                 enim nihil quia laudantium architecto, velit blanditiis mollitia saepe repellat iste natus ipsam! Dolor repellat illo atque ut ducimus impedit similique porro. Delectus sed nihil voluptas ducimus perspiciatis. Ex cupiditate ipsum minima veritatis
             </div>
         </div>
-        Tab 1 content
+         
         </Tab>
         <Tab eventKey={2} title="My Projects">
         <div id='divBottom'>
