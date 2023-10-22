@@ -61,3 +61,16 @@ def add_user():
     conn.close()
     return "i am a teapot"
     
+@app.route("/addProject", methods=['POST'])
+def add_project():
+    _json = request.get_json()
+    print(f'json is {_json}')
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    request_str = f"INSERT INTO projects () VALUES ()"
+    print(request_str)
+    projects = cursor.execute(request_str)
+    conn.commit()
+    cursor.close()
+    conn.close()
+    return "i am a teapot"
