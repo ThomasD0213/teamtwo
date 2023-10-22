@@ -21,7 +21,7 @@ def hello():
     conn.close()
     return json.dumps(data)
 
-@app.route("/{id}/")
+@app.route("/<id>")
 def get_profile_by_id(id):
     conn = get_db_connection()
     cursor = conn.cursor()
