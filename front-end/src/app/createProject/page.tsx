@@ -13,6 +13,14 @@ function FormExample() {
   const [validated, setValidated] = useState(false);
   const [selected, setSelected] = useState([]);
 
+  const [_project_name, setName] = useState("")
+  const [_owner, setOwner] = useState("")
+  const [_desc, setDesc] = useState("")
+  const [_skils, setSkills] = useState("")
+  const [paid, setPaid] = useState(0)
+
+
+
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
