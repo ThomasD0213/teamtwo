@@ -156,7 +156,7 @@ Join our community today and become part of an initiative dedicated to promoting
 </h1>
 
   
-<section id="about" style = {{paddingTop:'7vh'}}>
+<section id="about" style = {{paddingTop:'7vh', textAlign: 'center' }}>
   <div className="container">
     <div className="row" >
       <h1 style = {{paddingTop:'7vh', color:'#ffcb2d'}} >Why chose Team 2?
