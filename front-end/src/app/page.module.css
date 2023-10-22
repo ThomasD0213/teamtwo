@@ -1,3 +1,11 @@
+ :root{
+  --text-color: #130e01;
+  --background-color: #fffaeb;
+  --primary-color: #060606;
+  --secondary-color: #ffcb2d;
+  --accent-color: #cf4307;
+}  
+
 .main {
   display: flex;
   flex-direction: column;
@@ -227,3 +235,29 @@
     transform: rotate(0deg);
   }
 }
+
+
+/* LANDING PAGE*/
+@keyframes rotateVertical {
+  0% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(90deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  75% {
+    transform: rotateX(270deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.vertical-rotate {
+  animation: rotateVertical 1s linear;
+  animation-fill-mode: forwards;
+}
+/* LANDING PAGE*/
