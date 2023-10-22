@@ -18,6 +18,11 @@ function FormExample() {
   const [_desc, setDesc] = useState("")
   const [_skils, setSkills] = useState("")
   const [paid, setPaid] = useState(0)
+  const [_timeline, setTimeline] = useState("")
+  const [_status, setStatus] = useState("")
+
+
+  
 
 
 
