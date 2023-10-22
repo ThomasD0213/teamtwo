@@ -36,7 +36,7 @@ const projectPage = () => {
                         <p>John Smith</p>
                         <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
                         <p>Mad react skills</p>
-                        <p style={{color:'#CF4307'}}><b>Project Timeline</b></p>
+                        <p style={{color:'#CF4307'}}><b>Application Due Date</b></p>
                         <p>Finish by Nov 23 2023</p>
                     </Stack>
                 </Col>
