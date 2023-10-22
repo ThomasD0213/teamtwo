@@ -25,7 +25,7 @@ const projectPage = () => {
                 <Col id = "Contact">
                     <Stack style={{backgroundColor:'#FFCB2D', color:"#000000", borderRadius:'10px', paddingTop: 5 + 'em', paddingBottom: 5 + 'em'}}>
                     <h1><b>Contact Me:</b></h1>
-                    <p>Avery.Gudstewdent@university.edu</p>
+                    <p>Justin.Denver@university.edu</p>
                     </Stack>
                 </Col>
             </Row>
@@ -34,7 +34,7 @@ const projectPage = () => {
                     <Stack style={{backgroundColor:'#000000', color:"#FFFAEB", borderRadius:'10px', paddingTop: 7 + 'em' }}>
                         <p><b>OPEN</b>/CLOSED</p>
                         <p style={{color:'#CF4307'}}><b>Owner</b></p>
-                        <p>Avery Gudstewdent</p>
+                        <p>Justin Denver</p>
                         <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
                         <p>Designers, Front-end, back-end</p>
                         <p style={{color:'#CF4307'}}><b>Application Due Date</b></p>
