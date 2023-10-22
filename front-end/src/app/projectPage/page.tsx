@@ -44,6 +44,17 @@ const projectPage = () => {
                     <div>
                     <Stack style={{border: '4px solid #CF4307', borderRadius:'10px'}}>
                         <p><b>Project Overview:</b></p>
+                        <p>University || Location</p>
+                        <Container style={{padding:'10px'}}>
+                            <Row>
+                                <Col><p><b>Project Timeline</b></p></Col>
+                                <Col><p><b>Paid</b></p></Col>
+                            </Row>
+                            <Row>
+                                <Col><p>6 months</p></Col>
+                                <Col><p>No</p></Col>
+                            </Row>
+                        </Container>
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </Stack>
