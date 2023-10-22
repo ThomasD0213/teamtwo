@@ -2,6 +2,7 @@ from flask import Flask, request
 from flask_cors import CORS
 import sqlite3
 import json
+import random
 
 app = Flask(__name__)
 CORS(app)
@@ -47,6 +48,18 @@ def get_profile_by_id(id):
     conn.close()
     return json.dumps(data)
 
+@app.route("/getUser")
+def get_rand_user():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    profiles = cursor.execute('SELECT * FROM profiles')
+    rows = cursor.fetchall()
+    columns = [col[0] for col in cursor.description]
+    data = [dict(zip(columns, row)) for row in rows]
+    cursor.close()
+    conn.close()
+    return json.dumps(data[random.randint(0, len(data) - 1)])
+
 
 @app.route("/getProjects/<id>")
 def get_project_by_id(id):
@@ -80,7 +93,8 @@ def add_project():
     print(f'json is {_json}')
     conn = get_db_connection()
     cursor = conn.cursor()
-    request_str = f"INSERT INTO projects (name, owner, description, skills, paid, timeline, status, contact) VALUES (\"{_json['name']}\", \"{_json['owner']}\", \"{_json['description']}\", \"{_json['skills']}\", {_json['paid']}, \"{_json['timeline']}\", \"{_json['status']}\", {_json['contact']}\")"
+    #request_str = f"INSERT INTO projects (name, owner, description, skills, paid, timeline, status, contact) VALUES (\"{_json['name']}\", \"{_json['owner']}\", \"{_json['description']}\", \"{_json['skills']}\", {_json['paid']}, \"{_json['timeline']}\", \"{_json['status']}\", {_json['contact']}\")"
+    request_str = f"INSERT INTO projects (name, owner, description, skills, paid, timeline, status, contact) VALUES (\"{_json['name']}\", \"1\", \"{_json['description']}\", \"{_json['skills']}\", 0, \"{_json['timeline']}\", \"Active\", \"{_json['contact']}\")"
     print(request_str)
     projects = cursor.execute(request_str)
     conn.commit()
