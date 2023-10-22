@@ -1,10 +1,12 @@
+import { useParams } from 'next/navigation';
 import Card from 'react-bootstrap/Card';
 
 const MyCard = () => {
+  const{title}=useParams();
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
+        <Card.Title>Card {title}</Card.Title>
         <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
         <Card.Text>
           Some quick example text to build on the card title and make up the
@@ -16,5 +18,4 @@ const MyCard = () => {
     </Card>
   );
 }
-
-export default MyCard;
+export default MyCard

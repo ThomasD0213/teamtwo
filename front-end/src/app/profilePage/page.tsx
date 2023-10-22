@@ -15,7 +15,7 @@ function profile() {
         <div id="header">
             <Back/>
         </div>
-    <h1>Profile</h1>
+    <h1 style={{paddingBottom: 1 + 'em', marginRight: 40 + 'em'}}>Profile</h1>
     
         <Container fluid>
             <Row>
@@ -27,7 +27,7 @@ function profile() {
                 </Stack>
                 </Col>
                 <Col id = "Contact">
-                    <Stack style={{backgroundColor:'#FFCB2D', color:"#000000"}}>
+                    <Stack style={{backgroundColor:'#FFCB2D', color:"#000000", paddingTop: 5 + 'em', paddingBottom: 5 + 'em'}}>
                     <h1><b>Contact Me:</b></h1>
                     <p>Mona.Lisa@louvre.edu</p>
                     </Stack>
@@ -35,16 +35,18 @@ function profile() {
             </Row>
             <Row>
                 <Col id = "BottomRectangle">
-                    <Stack style={{backgroundColor:'#000000', color:"#FFFAEB"}}>
-                        <p style={{color:'#CF4307'}}><b>Role</b></p>
-                        <p>Undergraduate</p>
-                        <p style={{color:'#CF4307'}}><b>Major</b></p>
-                        <p>Studio Art</p>
+                    <Stack style={{backgroundColor:'#000000', color:"#FFFAEB", paddingTop: 2 + 'em'}}>
+                        <p style={{color:'#CF4307'}}><b>Owner</b></p>
+                        <p>Mona Lisa</p>
+                        <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
+                        <p>Mad react skills</p>
+                        <p style={{color:'#CF4307'}}><b>Project Timeline</b></p>
+                        <p>Finish by Nov 23 2023</p>
                     </Stack>
                 </Col>
                 <Col id="Description">
                     <div>
-                    <Stack style={{border: '4px solid #CF4307', borderRadius:'10px'}}>
+                    <Stack style={{border: '4px solid #CF4307', borderRadius:'10px', paddingTop: 5 + 'em', paddingBottom: 5 + 'em'}}>
                         <p><b>Bio:</b></p>
                         <p>I am the Mona Lisa and I'm a painting! I was painted sometime between 1503 and 1519 by the multitalented genius Leonardo Da Vinci!</p>
                     </Stack>
