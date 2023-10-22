@@ -3,12 +3,13 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import './profile.css';
 import Image from 'react-bootstrap/Image'
-import {Badge, Stack, Button, Container, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
+import {Badge, Stack, Button, Container, Row, Col, Card} from "../../../node_modules/react-bootstrap/esm/index";
 import { Dropdown, Nav, NavDropdown, NavItem, NavItemProps } from 'react-bootstrap';
 import team from './images/working-together.png';
 
 function profile() {
   return (
+    <div>
     <div>
     <h1>Profile</h1>
     
@@ -48,8 +49,58 @@ function profile() {
                     </div>
                 </Col>
             </Row>
+
         </Container>
 
+    </div>
+    {/* <Row>
+        <Col lg={4}>
+          {productList && productList.map(product =>{
+            const {id, title, price, category,description,image} = product;
+            return(
+            <>
+              <Card key={id} className="productlist">
+                <Card.Img variant="top" src={"#"} />
+                <Card.Body>
+                  <Card.Title>{title}</Card.Title>
+                  <Card.Text>{description}</Card.Text>
+                  <Card.Text>{category}</Card.Text>
+                  <Card.Text>
+                    {price}
+                  </Card.Text>
+                  <Button variant="primary">Add to cart</Button>
+                </Card.Body>
+              </Card>
+            </>
+            )
+          })}
+        </Col>
+      </Row> */}
+
+    <Row className="listed-profs">
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+            <Card.Title>Project 1</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">By: Sandy Squarepants</Card.Subtitle>
+            <Card.Text>
+            An end-to-end networking process consiting of digital art and other stuff that makes sense.
+            </Card.Text>
+            <Card.Link href="#">Card Link</Card.Link>
+            </Card.Body>
+        </Card> 
+        <Col classname="listed-profs">
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+            <Card.Title>Project 2</Card.Title>
+            <Card.Subtitle className="mb-2 text-muted">By: Sandy Squarepants</Card.Subtitle>
+            <Card.Text>
+            An end-to-end networking process consiting of digital art and other stuff that makes sense.
+            </Card.Text>
+            <Card.Link href="#">Card Link</Card.Link>
+            </Card.Body>
+        </Card> 
+        </Col>
+    </Row>
     </div>
   );
 }

@@ -42,7 +42,7 @@ const projectPage = () => {
                 </Col>
                 <Col id = "Description">
                     <div>
-                    <Stack style={{backgroundColor:'#FFCB2D', borderWidth:'thick', color:"#000000"}}>
+                    <Stack style={{border: '4px solid #CF4307'}}>
                         <p><b>Details:</b></p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </Stack>

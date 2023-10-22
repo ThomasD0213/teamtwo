@@ -10,7 +10,7 @@ return(
         <Image 
         alt = "Back arrow"
         src={arrow}
-        width={20} 
+        width={30} 
         />
     </Button>
 )

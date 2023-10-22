@@ -5,10 +5,19 @@ body {
 
 .col {
     padding:10px;
+    text-align: center;
+}
+
+.form-control {
+    background-color:D9D9D9;
 }
 
 #submitButton {
     background-color:#ffcb2d;
     color: #130e01;
     border-width: 0;
+}
+
+.mb-3 {
+    text-align: left;
 }
