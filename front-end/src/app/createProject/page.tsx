@@ -9,6 +9,8 @@ import Row from '../../../node_modules/react-bootstrap/esm/Row';
 import React from 'react';
 import { TagsInput } from "../../../node_modules/react-tag-input-component/dist/esm/index";
 import { Container } from 'react-bootstrap';
+import './createProject.css'
+import Back from '../../../Components/back';
 
 function FormExample() {
   const [validated, setValidated] = useState(false);
@@ -74,11 +76,15 @@ function FormExample() {
 
   return (
     <main>
+    <Back />
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Container>
         <Row>
+          <Col><h1>Create A Project</h1></Col>
+        </Row>
+        <Row>
           <Col>        
-            <Form.Group as={Col} md="4" controlId="validationCustom01" onChange={(e:any) => setName(e.target.value)}>
+            <Form.Group class="mb-3" as={Col} md="4" controlId="validationCustom01" onChange={(e:any) => setName(e.target.value)}>
             <Form.Label>Project Title</Form.Label> {/* text box title */}
             <Form.Control
               required
@@ -89,7 +95,7 @@ function FormExample() {
             </Form.Group>
           </Col>
           <Col>
-            <Form.Group as={Col} md="4" controlId="validationCustom05" onChange={(e:any) => setSkills(e.target.value)}>
+            <Form.Group class="mb-3" as={Col} md="4" controlId="validationCustom05" onChange={(e:any) => setSkills(e.target.value)}>
             <Form.Label>Skills</Form.Label>
             <TagsInput
               value={selected}
@@ -112,14 +118,14 @@ function FormExample() {
 
         <Row>
           <Col>
-            <Form.Group>
+            <Form.Group class="mb-3">
               <Form.Label>Application Deadline</Form.Label>
               <Form.Control type="text" placeholder="Enter the application deadline" />
             </Form.Group>
           </Col>
 
           <Col>
-            <Form.Group as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setTimeline(e.target.value)}>
+            <Form.Group class="mb-3" as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setTimeline(e.target.value)}>
             <Form.Label>Timeline</Form.Label>
             <Form.Control type="text" placeholder="Enter your timeline" required />
             <Form.Control.Feedback type="invalid">
@@ -129,7 +135,7 @@ function FormExample() {
           </Col>
 
           <Col>
-            <Form.Group as={Col} md="2" controlId="validationCustom04" onChange={(e:any) => setPaid(e.target.value)}>
+            <Form.Group class="mb-3" as={Col} md="2" controlId="validationCustom04" onChange={(e:any) => setPaid(e.target.value)}>
             <Form.Label>Paid/Unpaid</Form.Label>  {/** set to Paid and change to drop down with options yes or no */}
             <Form.Select>
               <option></option>
@@ -142,7 +148,7 @@ function FormExample() {
 
         <Row>
           <Col>
-            <Form.Group as={Col} md="4" controlId="validationCustom02" onChange={(e:any) => setDescription(e.target.value)}>
+            <Form.Group class="mb-3" as={Col} md="4" controlId="validationCustom02" onChange={(e:any) => setDescription(e.target.value)}>
             <Form.Label>Details</Form.Label>
             <Form.Control
               as="textarea"
@@ -157,7 +163,7 @@ function FormExample() {
           </Col>
 
           <Col>
-            <Form.Group>
+            <Form.Group class="mb-3">
                 <Form.Label>Important Links</Form.Label>
                 <Form.Control type="text" placeholder="Place any important links here"/>
               </Form.Group>
@@ -166,7 +172,7 @@ function FormExample() {
 
         <Row>
           <Col>
-              <Form.Group as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setContact(e.target.value)}>
+              <Form.Group class="mb-3" as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setContact(e.target.value)}>
               <Form.Label>Contact</Form.Label>
               <Form.Control type="text" placeholder="Enter your email or phone number" required />
               <Form.Control.Feedback type="invalid">
@@ -176,7 +182,7 @@ function FormExample() {
             </Col>
 
             <Col>
-              <Button type="submit">Submit</Button>
+              <Button type="submit" id="submitButton">Submit</Button>
             </Col>
         </Row>
       </Container>
