@@ -1,13 +1,22 @@
 'use client';
 import React from 'react'
-import {Badge, Stack, Button} from "../../../node_modules/react-bootstrap/esm/index";
+import {Badge, Stack, Button, Container} from "../../../node_modules/react-bootstrap/esm/index";
 import './project.css';
+import Image from 'next/image';
+import arrow from './images/leftArrow.png';
 
 const projectPage = () => {
   return (
+   <main>
+   <div id="header">
+        <Button id='backButton' href="/dashboard"><Image 
+        alt = "Back arrow"
+        src={arrow}
+        width={20} 
+        /></Button>
+    </div>
     <div>
         <h1>
-            <Button>Back</Button>
             Name of Project
         </h1>
 
@@ -21,6 +30,7 @@ const projectPage = () => {
             <text><b>Contact:</b> John.Smith@du.edu {"\n"}</text>
         </Stack>
     </div>
+    </main>
   )
 }
 

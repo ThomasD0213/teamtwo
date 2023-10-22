@@ -1,7 +1,23 @@
+#backButton{
+    background-color:transparent;
+    border-color: transparent;
+    padding: 10px;
+    float:left;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+
+#header{
+    background-color: #fffaeb;
+    width:100vw;
+    height:100px;
+    margin:0px;
+}
+
 body {
-    background-color: #282c34;
-    color: white;
-    padding: 40px;
-    font-family: Arial;
+    background-color: #fffaeb;
+    color: #130e01;
+    padding: 0px;
+    font-family: 'kosugi';
     text-align: center;
   }
