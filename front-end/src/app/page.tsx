@@ -52,7 +52,7 @@ export default function Home() {
   <Col xs={12} md={12} lg={12} style={{ backgroundColor: '#fffaeb', height: '18vh', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'  }}>
   <div style={{ position: 'absolute', top: '50px', right: '170vh' }}>
     <div >
-      <h1  style={{ fontSize: '4em',position: 'fixed', alignSelf:'bottom' }}>Team 
+      <h1  style={{ fontSize: '4em',position: 'fixed'}}>Team 
       <span style={{ color: '#ffcb2d', fontSize: '1em', position: 'fixed'}}>  To  
       
       <span className={isRotating ? 'vertical-rotate' : ''} style={{ color: '#cf4307',}}>{titleWord}</span>
@@ -65,15 +65,11 @@ export default function Home() {
       </div>
     </div>
     <h1 ></h1>
-    
-    
-   
-    
-    <div style={{ position: 'absolute', top: '50px', right: '10px' }}>
-    <Button onClick={open}href='/dashboard' style={{ color: '#130e01', backgroundColor: '#ffcb2d', borderColor:'rgba(0,0,0,0)' ,position:'fixed'}}>
+    <div className='boton' style={{ position:'absolute', top: '50px', right: '10px' ,}}>
+    <Button onClick={open}href='/dashboard' style={{ color: '#130e01', backgroundColor: '#ffcb2d', borderColor:'rgba(0,0,0,0)' }}>
       LOGIN!
     </Button>
-    <Button onClick={open}href='/createProfile' style={{ color: '#130e01', backgroundColor:'rgba(0,0,0,0)',borderColor: '#ffcb2d',borderWidth:'3PX', margin:'5px',position:'fixed'}}>
+    <Button onClick={open}href='/createProfile' style={{ color: '#130e01', backgroundColor:'rgba(0,0,0,0)',borderColor: '#ffcb2d',borderWidth:'3PX', margin:'5px'}}>
       SIGN UP!
     </Button>
     </div>
