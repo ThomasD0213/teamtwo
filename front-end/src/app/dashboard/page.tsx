@@ -5,21 +5,12 @@ import './dash.css';
 import Image from 'react-bootstrap/Image'
 import {Badge, Stack, Button, Container, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
 import { Dropdown, Nav, NavDropdown, NavItem, NavItemProps } from 'react-bootstrap';
+import Bar from '../../../Components/bar';
 
 function dashboard() {
   return (
     <div>
-
-    <h1>Dashboard</h1>
-    <div>
-        <Image className="justify-right"
-            src={"../../../profileoutline.png"}
-            rounded
-            width={50}
-            height={50}
-            alt="profile outline" 
-        />
-    </div>
+    <Bar />
     <Tabs variant="underline" defaultActiveKey={1} id="uncontrolled-tab-example">
         <Tab eventKey={1} title="Find A Project">
         Tab 1 content
