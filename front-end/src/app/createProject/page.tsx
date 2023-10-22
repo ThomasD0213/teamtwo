@@ -11,6 +11,7 @@ import { TagsInput } from "../../../node_modules/react-tag-input-component/dist/
 import { Container } from 'react-bootstrap';
 import './createProject.css'
 import Back from '../../../Components/back';
+import Stack from 'react-bootstrap';
 
 function FormExample() {
   const [validated, setValidated] = useState(false);
@@ -154,24 +155,33 @@ function FormExample() {
           </Col>
 
           <Col>
-            <Form.Group class="mb-3">
-                <Form.Label>Important Links</Form.Label>
-                <Form.Control type="text" placeholder="Place any important links here"/>
-              </Form.Group>
-          </Col>
-        </Row>
+            <Row>
+            <Form.Group className="mb-3">
+              <Form.Label>Important Links</Form.Label>
+              <Form.Control type="text" placeholder="Place any important links here"/>
+            </Form.Group>
+            </Row>
 
-        <Row>
-          <Col>
-              <Form.Group class="mb-3" as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setContact(e.target.value)}>
+            <Row>
+              <Form.Group className="mb-3" as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setContact(e.target.value)}>
               <Form.Label>Contact</Form.Label>
               <Form.Control type="text" placeholder="Enter your email or phone number" required />
               <Form.Control.Feedback type="invalid">
                 Please provide valid contact information.
               </Form.Control.Feedback>
               </Form.Group>
-            </Col>
+            </Row>
 
+            <Row>
+              <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>Upload Profile Image</Form.Label>
+              <Form.Control type="file" />
+              </Form.Group>
+              </Row>
+          </Col>
+        </Row>
+
+        <Row>
             <Col>
               <Button type="submit" id="submitButton">Submit</Button>
             </Col>
