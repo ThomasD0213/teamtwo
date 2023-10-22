@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import arrow from './images/leftArrow.png';
 import Button from 'react-bootstrap/Button';
+import './backbutton.css';
 
 const Back = () => {
 return(

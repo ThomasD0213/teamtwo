@@ -3,10 +3,8 @@
 // import Form from 'react-bootstrap/Form';
 import {FormEvent, useState} from 'react'
 import {Form, Button, Navbar, Container, Nav, NavDropdown, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
-import Bar from '../../../Components/bar'
+import Back from '../../../Components/back'
 import './createProfile.css';
-import Image from 'next/image';
-import arrow from './images/leftArrow.png';
 
 function createProfile() {
 
@@ -50,7 +48,7 @@ function createProfile() {
 
   return (
     <main>
-      <Bar />
+      <Back />
       <Form onSubmit={handleSubmit}>
         <Container>
           <Row>
