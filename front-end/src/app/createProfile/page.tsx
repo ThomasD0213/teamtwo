@@ -53,26 +53,26 @@ function createProfile() {
         <Container>
           <Row>
             <Col>
-              <h1 id="headingCenter">Create A Profile</h1>
+              <h1 id="headingCenter" className="primary-text" style={{ padding: '32px' }}>Create Profile</h1>
             </Col>
           </Row>
           <Row>
             <Col>        
               <Form.Group className="mb-3" controlId="First_Name" onChange={(e:any) => setFirst(e.target.value)}>
-              <Form.Label>First Name</Form.Label>
+              <Form.Label className="secondary-text">First Name</Form.Label>
               <Form.Control required placeholder="Enter first name" />
               </Form.Group>
             </Col>
             <Col>
               <Form.Group className="mb-3" controlId="Last_Name" onChange={(e:any) => setLast(e.target.value)}> 
-              <Form.Label>Last Name</Form.Label>
+              <Form.Label className="secondary-text">Last Name</Form.Label>
               <Form.Control required placeholder="Enter last name" />
               </Form.Group>
             </Col>
             <Col>
               <Form.Group className="mb-3" controlId="Role">
-              <Form.Label>Role</Form.Label>
-              <Form.Select onChange={(e:any) => setRole(e.target.value)}>
+              <Form.Label className="secondary-text">Role</Form.Label>
+              <Form.Select className="form-boxes" onChange={(e:any) => setRole(e.target.value)}>
                 <option></option>
                 <option>Student</option>
                 <option>Professor</option>
@@ -85,7 +85,7 @@ function createProfile() {
           <Row>
             <Col>
               <Form.Group className="mb-3" controlId="Email" onChange={(e:any) => setEmail(e.target.value)}>
-              <Form.Label>Email</Form.Label>
+              <Form.Label className="secondary-text" >Email</Form.Label>
               <Form.Control placeholder="Enter email address" />
               <Form.Text className="text-muted">
               We'll never share your email with anyone else.
@@ -94,7 +94,7 @@ function createProfile() {
             </Col>
             <Col>
               <Form.Group className="mb-3" controlId="Study" onChange={(e:any) => setMajor(e.target.value)}>
-              <Form.Label>Major / Field</Form.Label>
+              <Form.Label className="secondary-text">Major / Field</Form.Label>
               <Form.Control required placeholder="Enter major or field" />
               </Form.Group>           
             </Col>
@@ -103,21 +103,21 @@ function createProfile() {
           <Row>
             <Col>
               <Form.Group className="mb-3" controlId="Bio" onChange={(e:any) => setBio(e.target.value)}>
-              <Form.Label>Bio</Form.Label>
+              <Form.Label className="secondary-text">Bio</Form.Label>
               <Form.Control as="textarea" rows={3} required placeholder="Enter a little about yourself" />       
               </Form.Group>
             </Col>
             <Col>
               <Form.Group controlId="formFile" className="mb-3">
-              <Form.Label>Upload Profile Image</Form.Label>
-              <Form.Control type="file" />
+              <Form.Label className="secondary-text">Upload Profile Image</Form.Label>
+              <Form.Control className="accent-color background" type="file" placeholder="No file chosen"/>
               </Form.Group>
             </Col>
           </Row>
 
           <Row>
             <Col>
-              <Button variant="primary" type="submit" id = "submitButton">
+              <Button variant="primary" type="submit" id = "submitButton" >
               Submit
               </Button>
             </Col>
