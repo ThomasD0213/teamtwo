@@ -32,22 +32,32 @@ const projectPage = () => {
 
         <Container fluid>
             <Row>
-                <Col id = "TopRectangle">PROJECT TITLE</Col>
-                <Col id = "Contact">Contact Me: John.Smith@university.edu</Col>
+                <Col ><Container id = "TopRectangle"><b>PROJECT TITLE</b></Container></Col>
+                <Col id = "Contact">
+                    <Stack>
+                    <p><b>Contact Me:</b></p>
+                    <p>John.Smith@university.edu</p>
+                    </Stack>
+                </Col>
             </Row>
             <Row>
                 <Col id = "BottomRectangle">
                     <Stack>
                         <p>OPEN/CLOSED</p>
-                        <p><b>Owner</b></p>
+                        <p style={{color:'#CF4307'}}><b>Owner</b></p>
                         <p>John Smith</p>
-                        <p><b>Skills Needed</b></p>
+                        <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
                         <p>Mad react skills</p>
-                        <p><b>Project Timeline</b></p>
+                        <p style={{color:'#CF4307'}}><b>Project Timeline</b></p>
                         <p>Finish by Nov 23 2023</p>
                     </Stack>
                 </Col>
-                <Col id = "Description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</Col>
+                <Col id = "Description">
+                    <Stack>
+                        <p><b>Details:</b></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                    </Stack>
+                </Col>
             </Row>
         </Container>
     </div>
