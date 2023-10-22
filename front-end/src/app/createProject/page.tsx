@@ -28,7 +28,7 @@ function FormExample() {
           <Form.Control
             required
             type="text"
-            placeholder="Project title" // when there is nothing typed in, this is shown in the textbox
+            placeholder="Enter your project title" // when there is nothing typed in, this is shown in the textbox
             defaultValue="Project X" // hard coded default value.
           />
           <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
@@ -42,7 +42,7 @@ function FormExample() {
             required
             rows={8}
             type="text"
-            placeholder="Details"
+            placeholder="Enter project details"
             defaultValue="Our latest project, Project X, is a revolutionary 
             software application designed to transform the way businesses manage 
             their data. It offers a sleek and intuitive user interface, powerful 
@@ -56,16 +56,20 @@ function FormExample() {
       <Row className="mb-3">
         <Form.Group as={Col} md="3" controlId="validationCustom05">
           <Form.Label>Skills</Form.Label>
-          <Form.Control type="text" placeholder="Skills" required /> 
+          <Form.Control type="text" placeholder="Seperate multiple skills with a comma" required /> 
           {/* Instead of doing a textbox, I'd suggest a tag input but 
           from what I see there isn't a react bootstrap component 
           that we could use, so this could take some time to implement. */}
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="3" controlId="validationCustom04">
+        <Form.Group as={Col} md="2" controlId="validationCustom04">
           <Form.Label>Budget</Form.Label>
-          <Form.Control type="text" placeholder="Budget" required />
+          <InputGroup className="mb-3">
+            <InputGroup.Text>$</InputGroup.Text>
+            <Form.Control type="text" placeholder="Enter your budget" required />
+            <InputGroup.Text>.00</InputGroup.Text>
+          </InputGroup>
           <Form.Control.Feedback type="invalid">
             Please provide a valid number.
           </Form.Control.Feedback>
@@ -74,11 +78,22 @@ function FormExample() {
       <Row className="mb-3">
         <Form.Group as={Col} md="3" controlId="validationCustom04">
           <Form.Label>Timeline</Form.Label>
-          <Form.Control type="text" placeholder="Timeline" required />
+          <Form.Control type="text" placeholder="Enter your timeline" required />
           <Form.Control.Feedback type="invalid">
             Please provide a valid time frame.
           </Form.Control.Feedback>
         </Form.Group>
+      </Row>
+      <Row className="mb-3">
+      <Col xs={6}>
+      <Form.Label htmlFor="basic-url">Public Links</Form.Label>
+      <InputGroup className="mb-3">
+        <InputGroup.Text id="basic-addon3">
+          https://example.com/users/
+        </InputGroup.Text>
+        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
+      </InputGroup>
+      </Col>
       </Row>
       <Button type="submit">Submit</Button>
     </Form>
