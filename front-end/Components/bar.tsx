@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Container, Row, Navbar, NavbarBrand, Col, Nav, Image } from '../node_modules/react-bootstrap/esm/index'
+import { Container, Row, Navbar, NavbarBrand, Col, Nav, Image, Button} from '../node_modules/react-bootstrap/esm/index'
 
 const Bar = () => {
     return (
@@ -22,7 +22,9 @@ const Bar = () => {
                         </Col>
 
                     </Row>
-                        <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mona_Lisa-restored.jpg/220px-Mona_Lisa-restored.jpg' height={50} width={50} roundedCircle/>
+                        <Button style={{backgroundColor:'transparent', borderColor:'transparent'}} href='/profilePage'>
+                            <Image src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mona_Lisa-restored.jpg/220px-Mona_Lisa-restored.jpg' height={50} width={50} roundedCircle/>
+                        </Button>
             </Container> 
             </Navbar>
         </main>

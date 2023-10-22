@@ -16,13 +16,13 @@ const projectPage = () => {
         <Container fluid>
             <Row>
                 <Col>
-                <Stack style={{backgroundColor:'#000000', color:"#FFFFFF"}}>
+                <Stack style={{backgroundColor:'#000000', color:"#FFFFFF", borderRadius:'10px'}}>
                 <Image alt = "Team working together" src={team} width={250} id="center"/>
                 <h1><b>PROJECT TITLE</b></h1>
                 </Stack>
                 </Col>
                 <Col id = "Contact">
-                    <Stack style={{backgroundColor:'#FFCB2D', color:"#000000"}}>
+                    <Stack style={{backgroundColor:'#FFCB2D', color:"#000000", borderRadius:'10px'}}>
                     <h1><b>Contact Me:</b></h1>
                     <p>John.Smith@university.edu</p>
                     </Stack>
@@ -30,20 +30,32 @@ const projectPage = () => {
             </Row>
             <Row>
                 <Col id = "BottomRectangle">
-                    <Stack style={{backgroundColor:'#000000', color:"#FFFAEB"}}>
+                    <Stack style={{backgroundColor:'#000000', color:"#FFFAEB", borderRadius:'10px'}}>
                         <p>OPEN/CLOSED</p>
                         <p style={{color:'#CF4307'}}><b>Owner</b></p>
                         <p>John Smith</p>
                         <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
                         <p>Mad react skills</p>
-                        <p style={{color:'#CF4307'}}><b>Project Timeline</b></p>
+                        <p style={{color:'#CF4307'}}><b>Application Due Date</b></p>
                         <p>Finish by Nov 23 2023</p>
                     </Stack>
                 </Col>
                 <Col id = "Description">
                     <div>
-                    <Stack style={{border: '4px solid #CF4307'}}>
-                        <p><b>Details:</b></p>
+                    <Stack style={{border: '4px solid #CF4307', borderRadius:'10px'}}>
+                        <p><b>Project Overview:</b></p>
+                        <p>University || Location</p>
+                        <Container style={{padding:'10px'}}>
+                            <Row>
+                                <Col><p><b>Project Timeline</b></p></Col>
+                                <Col><p><b>Paid</b></p></Col>
+                            </Row>
+                            <Row>
+                                <Col><p>6 months</p></Col>
+                                <Col><p>No</p></Col>
+                            </Row>
+                        </Container>
+
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </Stack>
                     </div>

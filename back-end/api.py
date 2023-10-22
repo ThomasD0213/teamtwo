@@ -47,6 +47,7 @@ def get_profile_by_id(id):
     conn.close()
     return json.dumps(data)
 
+
 @app.route("/getProjects/<id>")
 def get_project_by_id(id):
     conn = get_db_connection()
@@ -79,7 +80,7 @@ def add_project():
     print(f'json is {_json}')
     conn = get_db_connection()
     cursor = conn.cursor()
-    request_str = f"INSERT INTO projects (name, owner, description, skills, paid, timeline, status, application, contact) VALUES (\"{_json['name']}\", \"{_json['owner']}\", \"{_json['description']}\", \"{_json['skills']}\", \"{_json['paid']}\", \"{_json['timeline']}\", \"{_json['status']}\", \"{_json['application'] if _json['email'] != '' else 'bungus'}\", \"{_json['contact']}\")"
+    request_str = f"INSERT INTO projects (name, owner, description, skills, paid, timeline, status, contact) VALUES (\"{_json['name']}\", \"{_json['owner']}\", \"{_json['description']}\", \"{_json['skills']}\", {_json['paid']}, \"{_json['timeline']}\", \"{_json['status']}\", {_json['contact']}\")"
     print(request_str)
     projects = cursor.execute(request_str)
     conn.commit()

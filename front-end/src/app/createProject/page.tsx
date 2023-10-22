@@ -13,6 +13,19 @@ function FormExample() {
   const [validated, setValidated] = useState(false);
   const [selected, setSelected] = useState([]);
 
+  const [_project_name, setName] = useState("")
+  const [_owner, setOwner] = useState("")
+  const [_desc, setDesc] = useState("")
+  const [_skils, setSkills] = useState("")
+  const [paid, setPaid] = useState(0)
+  const [_timeline, setTimeline] = useState("")
+  const [_status, setStatus] = useState("")
+
+
+  
+
+
+
   const [formData, setFormData] = useState({
     name: "",
     owner: "",
@@ -45,6 +58,15 @@ function FormExample() {
   }
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+    const [_project_name, setName] = useState("")
+    const [_owner, setOwner] = useState("")
+    const [_details, setDescription] = useState("")
+    const [_skills, setSkills] = useState("")
+    const [_paid, setPaid] = useState(0)
+    const [_timeline, setTimeline] = useState("")
+    const [_status, setStatus] = useState("")
+    const [_contact, setContact] = useState("")
+
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
       event.preventDefault();
@@ -76,7 +98,7 @@ function FormExample() {
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="4" controlId="validationCustom02" onChange={(e:any) => setOwner(e.target.value)}>
+        <Form.Group as={Col} md="4" controlId="validationCustom02" onChange={(e:any) => setDescription(e.target.value)}>
           <Form.Label>Details</Form.Label>
           <Form.Control
             as="textarea"
@@ -135,7 +157,7 @@ function FormExample() {
           <Form.Label>Contact</Form.Label>
           <Form.Control type="text" placeholder="Enter your email or phone number" required />
           <Form.Control.Feedback type="invalid">
-            Please provide a valid contact information.
+            Please provide valid contact information.
           </Form.Control.Feedback>
         </Form.Group>
       </Row>
