@@ -4,6 +4,7 @@ import {Badge, Stack, Button, Container, Row, Col} from "../../../node_modules/r
 import './project.css';
 import Image from 'next/image';
 import arrow from './images/leftArrow.png';
+import team from './images/working-together.png';
 
 const projectPage = () => {
   return (
@@ -16,33 +17,24 @@ const projectPage = () => {
         /></Button>
     </div>
     <div>
-        {/* <h1>
-            Name of Project
-        </h1>
-
-        <Stack direction="vertical">
-            <Badge bg="primary">OPEN/CLOSED</Badge>
-            <text><b>Owner:</b> John Smith {"\n"}</text>
-            <text><b>Details:</b> Lorem ipsum {"\n"}</text>
-            <text><b>Skills Needed:</b> Awesome react skills {"\n"}</text>
-            <text><b>Project Timeline:</b> Finish by Nov 23 2023 {"\n"}</text>
-            <text><b>Budget:</b> N/A {"\n"}</text>
-            <text><b>Contact:</b> John.Smith@du.edu {"\n"}</text>
-        </Stack> */}
-
         <Container fluid>
             <Row>
-                <Col ><Container id = "TopRectangle"><b>PROJECT TITLE</b></Container></Col>
+                <Col>
+                <Stack style={{backgroundColor:'#000000', color:"#FFFFFF"}}>
+                <Image alt = "Team working together" src={team} width={250} id="center"/>
+                <h1><b>PROJECT TITLE</b></h1>
+                </Stack>
+                </Col>
                 <Col id = "Contact">
-                    <Stack>
-                    <p><b>Contact Me:</b></p>
+                    <Stack style={{backgroundColor:'#FFCB2D', color:"#000000"}}>
+                    <h1><b>Contact Me:</b></h1>
                     <p>John.Smith@university.edu</p>
                     </Stack>
                 </Col>
             </Row>
             <Row>
                 <Col id = "BottomRectangle">
-                    <Stack>
+                    <Stack style={{backgroundColor:'#000000', color:"#FFFAEB"}}>
                         <p>OPEN/CLOSED</p>
                         <p style={{color:'#CF4307'}}><b>Owner</b></p>
                         <p>John Smith</p>
@@ -53,10 +45,12 @@ const projectPage = () => {
                     </Stack>
                 </Col>
                 <Col id = "Description">
-                    <Stack>
+                    <div>
+                    <Stack style={{backgroundColor:'#FFCB2D', borderWidth:'thick', color:"#000000"}}>
                         <p><b>Details:</b></p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </Stack>
+                    </div>
                 </Col>
             </Row>
         </Container>

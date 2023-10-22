@@ -34,6 +34,9 @@ body {
     text-align: center;
   }
 
-#topRectange{
-    background-color:#fffaeb;
+#center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
