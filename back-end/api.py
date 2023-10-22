@@ -37,9 +37,12 @@ def get_profile_by_id(id):
 
 @app.route("/addUser", methods=['POST'])
 def add_user():
+    _json = request.get_json()
+    print(_json)
     conn = get_db_connection()
     cursor = conn.cursor()
-    profiles = cursor.execute(f"INSERT INTO profiles VALUES ({request.form['first_name']}, {request.form['last_name']}, {request.form['role']}, {request.form['major']}, {request.form['email']}, {request.form['phone']}, {request.form['pfp']})")
+    profiles = cursor.execute(f"INSERT INTO profiles VALUES ({_json['first_name']}, {_json['last_name']}, {_json['role']}, {_json['major']}, {_json['email']}, {_json['phone']})")
     cursor.close()
     conn.close()
+    return "i am a teapot"
     
