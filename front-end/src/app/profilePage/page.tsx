@@ -21,23 +21,22 @@ function profile() {
             <Row>
                 <Col>
                 <Stack style={{backgroundColor:'#000000', color:"#FFFFFF"}}>
-                <Image alt = "Team working together" src={"../../../working-together.png"} width={250} id="center"/>
-                <h1><b>John Smiths Profile</b></h1>
+                <Image style={{padding: 2 + 'em'}}alt = "Team working together" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mona_Lisa-restored.jpg/220px-Mona_Lisa-restored.jpg"} height={225} roundedCircle id="center"/>
+                <h1><b>Mona Lisa's Profile</b></h1>
                 </Stack>
                 </Col>
                 <Col id = "Contact">
                     <Stack style={{backgroundColor:'#FFCB2D', color:"#000000"}}>
                     <h1><b>Contact Me:</b></h1>
-                    <p>John.Smith@university.edu</p>
+                    <p>Mona.Lisa@louvre.edu</p>
                     </Stack>
                 </Col>
             </Row>
             <Row>
                 <Col id = "BottomRectangle">
                     <Stack style={{backgroundColor:'#000000', color:"#FFFAEB"}}>
-                        <p>OPEN/CLOSED</p>
                         <p style={{color:'#CF4307'}}><b>Owner</b></p>
-                        <p>John Smith</p>
+                        <p>Mona Lisa</p>
                         <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
                         <p>Mad react skills</p>
                         <p style={{color:'#CF4307'}}><b>Project Timeline</b></p>
@@ -47,8 +46,8 @@ function profile() {
                 <Col id="Description">
                     <div>
                     <Stack style={{border: '4px solid #CF4307', borderRadius:'10px'}}>
-                        <p><b>Details:</b></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+                        <p><b>Bio:</b></p>
+                        <p>I am the Mona Lisa and I'm a painting! I was painted sometime between 1503 and 1519 by the multitalented genius Leonardo Da Vinci!</p>
                     </Stack>
                     </div>
                 </Col>
