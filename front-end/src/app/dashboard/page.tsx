@@ -5,6 +5,7 @@ import './dash.css';
 import Image from 'react-bootstrap/Image'
 import {Badge, Stack, Button, Container, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
 import { Dropdown, Nav, NavDropdown, NavItem, NavItemProps } from 'react-bootstrap';
+import MyCard from '../../../Components/myCard'
 import Bar from '../../../Components/bar';
 
 function dashboard() {
@@ -24,6 +25,9 @@ function dashboard() {
     </div>
     <div id='divBottom'>
         <div id='scrollContain'>
+            <div>
+                <MyCard />
+            </div>
             enim nihil quia laudantium architecto, velit blanditiis mollitia saepe repellat iste natus ipsam! Dolor repellat illo atque ut ducimus impedit similique porro. Delectus sed nihil voluptas ducimus perspiciatis. Ex cupiditate ipsum minima veritatis
         </div>
     </div>

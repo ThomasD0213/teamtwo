@@ -6,11 +6,15 @@ import Image from 'react-bootstrap/Image'
 import {Badge, Stack, Button, Container, Row, Col, Card} from "../../../node_modules/react-bootstrap/esm/index";
 import { Dropdown, Nav, NavDropdown, NavItem, NavItemProps } from 'react-bootstrap';
 import team from './images/working-together.png';
+import Back from '../../../Components/back';
 
 function profile() {
   return (
     <div>
     <div>
+        <div id="header">
+            <Back/>
+        </div>
     <h1>Profile</h1>
     
         <Container fluid>
@@ -42,7 +46,7 @@ function profile() {
                 </Col>
                 <Col id="Description">
                     <div>
-                    <Stack style={{backgroundColor:'#FFCB2D', borderWidth:'thick', color:"#000000"}}>
+                    <Stack style={{border: '4px solid #CF4307', borderRadius:'10px'}}>
                         <p><b>Details:</b></p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
                     </Stack>
@@ -85,7 +89,7 @@ function profile() {
             <Card.Text>
             An end-to-end networking process consiting of digital art and other stuff that makes sense.
             </Card.Text>
-            <Card.Link href="#">Card Link</Card.Link>
+            <Card.Link href="#">Card </Card.Link>
             </Card.Body>
         </Card> 
         <Col classname="listed-profs">
