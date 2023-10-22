@@ -15,7 +15,7 @@ function profile() {
         <div id="header">
             <Back/>
         </div>
-    <h1 style={{paddingBottom: 1 + 'em', marginRight: 40 + 'em'}}>Profile</h1>
+    <h1 style={{paddingBottom: 1 + 'em'}}>Profile</h1>
     
         <Container fluid>
             <Row>
