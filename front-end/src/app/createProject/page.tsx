@@ -72,13 +72,14 @@ function FormExample() {
     <Form noValidate validated={validated} onSubmit={handleSubmit}>
       <Container>
         <Row>
-          <Col><h1>Create A Project</h1></Col>
+          <Col><h1 className="primary-text">Create Project</h1></Col>
         </Row>
         <Row>
           <Col>        
             <Form.Group class="mb-3" as={Col} md="4" controlId="validationCustom01" onChange={(e:any) => setName(e.target.value)}>
-            <Form.Label>Project Title</Form.Label> {/* text box title */}
+            <Form.Label className="secondary-text">Project Title</Form.Label> {/* text box title */}
             <Form.Control
+              className="form-boxes"
               required
               type="text"
               placeholder="Enter your project title" // when there is nothing typed in, this is shown in the textbox
@@ -88,7 +89,7 @@ function FormExample() {
           </Col>
           <Col>
             <Form.Group class="mb-3" as={Col} md="4" controlId="validationCustom05" onChange={(e:any) => setSkills(e.target.value)}>
-            <Form.Label>Skills</Form.Label>
+            <Form.Label className="secondary-text">Skills</Form.Label>
             <TagsInput
               value={selected}
               onChange={setSelected}
@@ -102,8 +103,9 @@ function FormExample() {
               disabled={undefined} 
               isEditOnRemove={undefined} 
               beforeAddValidate={undefined} 
-              onKeyUp={undefined} 
-              classNames={undefined}            />          
+              onKeyUp={undefined}
+              classNames={undefined}
+              />          
             </Form.Group>
           </Col>
         </Row>
@@ -111,15 +113,15 @@ function FormExample() {
         <Row>
           <Col>
             <Form.Group class="mb-3">
-              <Form.Label>Application Deadline</Form.Label>
-              <Form.Control type="text" placeholder="Enter the application deadline" />
+              <Form.Label className="secondary-text">Application Deadline</Form.Label>
+              <Form.Control className="form-boxes" type="text" placeholder="Enter the application deadline" />
             </Form.Group>
           </Col>
 
           <Col>
             <Form.Group class="mb-3" as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setTimeline(e.target.value)}>
-            <Form.Label>Timeline</Form.Label>
-            <Form.Control type="text" placeholder="Enter your timeline" required />
+            <Form.Label className="secondary-text">Timeline</Form.Label>
+            <Form.Control className="form-boxes" type="text" placeholder="Enter your timeline" required />
             <Form.Control.Feedback type="invalid">
               Please provide a valid time frame.
             </Form.Control.Feedback>
@@ -128,8 +130,8 @@ function FormExample() {
 
           <Col>
             <Form.Group class="mb-3" as={Col} md="2" controlId="validationCustom04" onChange={(e:any) => setPaid(e.target.value)}>
-            <Form.Label>Paid/Unpaid</Form.Label>  {/** set to Paid and change to drop down with options yes or no */}
-            <Form.Select>
+            <Form.Label className="secondary-text">Paid/Unpaid</Form.Label>  {/** set to Paid and change to drop down with options yes or no */}
+            <Form.Select className="form-boxes">
               <option></option>
               <option>Paid</option>
               <option>Unpaid</option>
@@ -141,8 +143,9 @@ function FormExample() {
         <Row>
           <Col>
             <Form.Group class="mb-3" as={Col} md="4" controlId="validationCustom02" onChange={(e:any) => setDescription(e.target.value)}>
-            <Form.Label>Details</Form.Label>
+            <Form.Label className="secondary-text">Details</Form.Label>
             <Form.Control
+              className="form-boxes"
               as="textarea"
               required
               rows={8}
@@ -157,15 +160,15 @@ function FormExample() {
           <Col>
             <Row>
             <Form.Group className="mb-3">
-              <Form.Label>Important Links</Form.Label>
-              <Form.Control type="text" placeholder="Place any important links here"/>
+              <Form.Label className="secondary-text">Important Links</Form.Label>
+              <Form.Control className="form-boxes" type="text" placeholder="Place any important links here"/>
             </Form.Group>
             </Row>
 
             <Row>
               <Form.Group className="mb-3" as={Col} md="3" controlId="validationCustom04" onChange={(e:any) => setContact(e.target.value)}>
-              <Form.Label>Contact</Form.Label>
-              <Form.Control type="text" placeholder="Enter your email or phone number" required />
+              <Form.Label className="secondary-text">Contact</Form.Label>
+              <Form.Control className="form-boxes" type="text" placeholder="Enter your email or phone number" required />
               <Form.Control.Feedback type="invalid">
                 Please provide valid contact information.
               </Form.Control.Feedback>
@@ -174,8 +177,8 @@ function FormExample() {
 
             <Row>
               <Form.Group controlId="formFile" className="mb-3">
-              <Form.Label>Upload Profile Image</Form.Label>
-              <Form.Control type="file" />
+              <Form.Label className="secondary-text">Upload Profile Image</Form.Label>
+              <Form.Control className="accent-color background" type="file" />
               </Form.Group>
               </Row>
           </Col>
