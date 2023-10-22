@@ -3,18 +3,14 @@ import React from 'react'
 import {Badge, Stack, Button, Container, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
 import './project.css';
 import Image from 'next/image';
-import arrow from './images/leftArrow.png';
 import team from './images/working-together.png';
+import Back from '../../../Components/back';
 
 const projectPage = () => {
   return (
    <main>
    <div id="header">
-        <Button id='backButton' href="/dashboard"><Image 
-        alt = "Back arrow"
-        src={arrow}
-        width={20} 
-        /></Button>
+        <Back />
     </div>
     <div>
         <Container fluid>
