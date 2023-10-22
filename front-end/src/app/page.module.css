@@ -275,9 +275,12 @@
 @media screen and (max-width: 600px) {
   .boton {
     position: relative;
+    margin-left: 140vh;
     top: 50px;
     right: 10px;
   }
 }
 
-/* LANDING PAGE*/
+#about{
+  padding-top: 5vh;
+}

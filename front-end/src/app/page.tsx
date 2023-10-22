@@ -50,10 +50,10 @@ export default function Home() {
       
       <Row xs={12} md={12} lg={12}>
   <Col xs={12} md={12} lg={12} style={{ backgroundColor: '#fffaeb', height: '18vh', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'  }}>
-  <div style={{ position: 'absolute', top: '50px', right: '170vh' }}>
+  <div style={{ position: 'sticky', top: '50px', right: '170vh' }}>
     <div >
-      <h1  style={{ fontSize: '4em',position: 'fixed'}}>Team 
-      <span style={{ color: '#ffcb2d', fontSize: '1em', position: 'fixed'}}>  To  
+      <h1  style={{ fontSize: '4em',position: 'absolute'}}>Team 
+      <span style={{ color: '#ffcb2d', fontSize: '1em', position: 'absolute'}}>  To  
       
       <span className={isRotating ? 'vertical-rotate' : ''} style={{ color: '#cf4307',}}>{titleWord}</span>
       </span>
@@ -65,14 +65,23 @@ export default function Home() {
       </div>
     </div>
     <h1 ></h1>
-    <div className='boton' style={{ position:'absolute', top: '50px', right: '10px' ,}}>
-    <Button onClick={open}href='/dashboard' style={{ color: '#130e01', backgroundColor: '#ffcb2d', borderColor:'rgba(0,0,0,0)' }}>
+    {/* <div className='boton' style={{  position:'relative',top: '50px', right: '10px',}}>
+    <Button onClick={open}href='/dashboard' style={{color: '#130e01', backgroundColor: '#ffcb2d', borderColor:'rgba(0,0,0,0)' }}>
       LOGIN!
     </Button>
-    <Button onClick={open}href='/createProfile' style={{ color: '#130e01', backgroundColor:'rgba(0,0,0,0)',borderColor: '#ffcb2d',borderWidth:'3PX', margin:'5px'}}>
+    <Button onClick={open}href='/createProfile' style={{color: '#130e01', backgroundColor:'rgba(0,0,0,0)',borderColor: '#ffcb2d',borderWidth:'3PX', margin:'5px'}}>
       SIGN UP!
     </Button>
-    </div>
+    </div> */}
+    <div className='boton' style={{ marginRight: '15px', marginTop: '15px', textAlign: 'right' }}>
+  <Button onClick={open} href='/dashboard' style={{ color: '#130e01', backgroundColor: '#ffcb2d', borderColor: 'rgba(0,0,0,0)', marginLeft:'140vh'}}>
+    LOGIN!
+  </Button>
+  <Button onClick={open} href='/createProfile' style={{ color: '#130e01', backgroundColor: 'rgba(0,0,0,0)', borderColor: '#ffcb2d', borderWidth: '3px', margin: '5px' }}>
+    SIGN UP!
+  </Button>
+</div>
+
   </Col>
 </Row>
 {/* <Row>
@@ -108,7 +117,7 @@ export default function Home() {
             </Modal> */}
       
       <Row><Col xs={6} md={5} >
-      <Image src={MyImage} alt="My Image" style={{margin:'25px',marginLeft:'25px',marginTop:'20vh'}}/>
+      <Image src={MyImage} alt="My Image" style={{margin:'25px',marginLeft:'15vw',marginTop:'20vh'}}/>
         </Col>
         <Col xs={6} md={4} style={{margin:'8em'}}>
           {/* <h2 style={{color: '#fffaeb', fontSize: '2em'}}>TOGETHER-WE BUILD.{''}
@@ -119,12 +128,67 @@ export default function Home() {
 
        </h2>
            */}
-           <h2 style={{ color: '#fffaeb', fontSize: '2em', textAlign: 'center' }}>
-  TOGETHER-WE BUILD.{' '}
+           {/* <h1 style={{ color: '#fffaeb', fontSize: '3em', textAlign: 'center' }}>
+  TOGETHER -WE BUILD.{' '}
   <span style={{ color: '#fffaeb', fontSize: '0.5em', display: 'block', textAlign: 'center' }}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <h4 style={{ color: '#fffaeb', fontSize: '2em', textAlign: 'center' }}>______________</h4>
+    <h5> Team2 is your gateway to a vibrant community where students, staff, and faculty come together beyond the classroom to collaborate on exciting projects. With Team2, you can transform your academic journey, enrich your portfolio, and expand your professional network.
+</h5>
+<h6 style={{ color: '#fffaeb', fontSize: '1em', textAlign: 'center' }}>Why Choose Team2?</h6>
+    •    Collaboration that Counts: At Team2, we facilitate meaningful collaborations between students, faculty members, and staff professionals. Whether it's coding, creative writing, or groundbreaking research, you can work together with peers from various backgrounds and expertise areas.
+    •    Networking Opportunities: Your education doesn't end at graduation. Team2 helps you connect with peers, mentors, and professionals who can open doors to internships, job opportunities, and invaluable mentorship.
+    •    Portfolio Building: Showcase your collaborative projects in a personalized portfolio on our platform. Impress future employers with tangible proof of your skills and proactive approach.
+Seamless Experience
+Managing collaborations has never been easier. With Team2, you can create your profile, find exciting projects that align with your interests, and easily manage your collaborations, all in one convenient platform. Say goodbye to the hassles of juggling multiple tools and communication channels.
+Join Team2 Today
+Ready to redefine your educational journey? Join Team2 and embark on projects that have the potential to shape your future. Our platform is open to undergraduate and graduate students, faculty members, and staff professionals. Together, we're reshaping education, one collaborative project at a time.
+Join our community today and become part of an initiative dedicated to promoting academia, providing field-specific experience, and fostering real-world growth. Welcome to Team2, where learning truly meets innovation.
   </span>
-</h2>
+</h1> */}
+<h1 style={{ color: '#cf4307', fontSize: '3em', textAlign: 'center' }}>
+  TOGETHER - WE BUILD.{' '}
+  <span style={{ color: '#fffaeb', fontSize: '0.5em', display: 'block', textAlign: 'center' }}>
+    <h4 style={{ color: '#fffaeb', fontSize: '2em', textAlign: 'center' }}>______________</h4>
+    <h5>
+      Team2 is your gateway to a vibrant community where students, staff, and faculty come together beyond the classroom to collaborate on exciting projects. With Team2, you can transform your academic journey, enrich your portfolio, and expand your professional network.
+    </h5>
+     </span>
+</h1>
+
+  
+<section id="about" style = {{paddingTop:'7vh', textAlign: 'center' }}>
+  <div className="container">
+    <div className="row" >
+      <h1 style = {{paddingTop:'7vh', color:'#ffcb2d'}} >Why chose Team 2?
+      </h1>
+      <div className="block" style = {{paddingTop:'7vh', color:'#ffcb2d'}}><h3>Seamless Experience</h3></div>
+      <p style = {{paddingTop:'7vh', color:'#fffaeb'}}>Managing collaborations has never been easier. With Team2, you can create your profile, find exciting projects that align with your interests, and easily manage your collaborations, all in one convenient platform. Say goodbye to the hassles of juggling multiple tools and communication channels.
+    </p>
+    </div>
+    <div className="row">
+      <div className="six columns">
+        <h3 style = {{paddingTop:'7vh', color:'#ffcb2d'}}><span className="typcn typcn-device-desktop icon"></span>Collaboration that Counts</h3>
+        <p style = {{paddingTop:'7vh', color:'#fffaeb'}}>At Team2, we facilitate meaningful collaborations between students, faculty members, and staff professionals. Whether it's coding, creative writing, or groundbreaking research, you can work together with peers from various backgrounds and expertise areas.</p>
+      </div>
+      <div className="six columns">
+        <h3 style = {{paddingTop:'7vh', color:'#ffcb2d'}}><span className="typcn typcn-pen icon" ></span>Networking Opportunities</h3>
+        <p style = {{paddingTop:'7vh', color:'#fffaeb'}}> Your education doesn't end at graduation. Team2 helps you connect with peers, mentors, and professionals who can open doors to internships, job opportunities, and invaluable mentorship.</p>
+      </div>
+      <div className="row">
+        <div className="six columns">
+          <h3 style = {{paddingTop:'7vh', color:'#ffcb2d'}}><span className="typcn typcn-cog-outline icon"></span>Portfolio Building</h3>
+          <p style = {{paddingTop:'7vh', color:'#fffaeb'}}> Showcase your collaborative projects in a personalized portfolio on our platform. Impress future employers with tangible proof of your skills and proactive approach.</p>
+        </div>
+        <div className="six columns">
+          <h3 style = {{paddingTop:'7vh', color:'#ffcb2d'}}><span className="typcn typcn-lightbulb icon"></span>Join Team2 Today</h3>
+          <p style = {{paddingTop:'7vh', color:'#fffaeb'}}>Ready to redefine your educational journey? Join Team2 and embark on projects that have the potential to shape your future. Our platform is open to undergraduate and graduate students, faculty members, and staff professionals. Together, we're reshaping education, one collaborative project at a time. Join our community today and become part of an initiative dedicated to promoting academia, providing field-specific experience, and fostering real-world growth. Welcome to Team2, where learning truly meets innovation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
         </Col>
         
