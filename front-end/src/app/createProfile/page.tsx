@@ -2,8 +2,11 @@
 // import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';
 import {FormEvent, useState} from 'react'
-import {Form, Button, Navbar, Container, Nav, NavDropdown} from "../../../node_modules/react-bootstrap/esm/index";
+import {Form, Button, Navbar, Container, Nav, NavDropdown, Row, Col} from "../../../node_modules/react-bootstrap/esm/index";
 import Bar from '../../../Components/bar'
+import './createProfile.css';
+import Image from 'next/image';
+import arrow from './images/leftArrow.png';
 
 function createProfile() {
 
@@ -44,58 +47,86 @@ function createProfile() {
       body: JSON.stringify(stuff),
     })
   }
+
   return (
     <main>
       <Bar />
       <Form onSubmit={handleSubmit}>
-        <Form.Group className="mb-3" controlId="First_Name" onChange={(e:any) => setFirst(e.target.value)}>
-          <Form.Label>First Name</Form.Label>
-          <Form.Control required placeholder="Enter first name" />
-        </Form.Group>
+        <Container>
+          <Row>
+            <Col>
+              <h1 id="headingCenter">Create A Profile</h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col>        
+              <Form.Group className="mb-3" controlId="First_Name" onChange={(e:any) => setFirst(e.target.value)}>
+              <Form.Label>First Name</Form.Label>
+              <Form.Control required placeholder="Enter first name" />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group className="mb-3" controlId="Last_Name" onChange={(e:any) => setLast(e.target.value)}> 
+              <Form.Label>Last Name</Form.Label>
+              <Form.Control required placeholder="Enter last name" />
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group className="mb-3" controlId="Role">
+              <Form.Label>Role</Form.Label>
+              <Form.Select onChange={(e:any) => setRole(e.target.value)}>
+                <option></option>
+                <option>Student</option>
+                <option>Professor</option>
+              </Form.Select>
+              <Form.Control type='radio' className="hidden" required />
+              </Form.Group>
+            </Col>
+          </Row>
 
-        <Form.Group className="mb-3" controlId="Last_Name" onChange={(e:any) => setLast(e.target.value)}> 
-          <Form.Label>Last Name</Form.Label>
-          <Form.Control required placeholder="Enter last name" />
-        </Form.Group>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="Email" onChange={(e:any) => setEmail(e.target.value)}>
+              <Form.Label>Email</Form.Label>
+              <Form.Control placeholder="Enter email address" />
+              <Form.Text className="text-muted">
+              We'll never share your email with anyone else.
+              </Form.Text>
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group className="mb-3" controlId="Study" onChange={(e:any) => setMajor(e.target.value)}>
+              <Form.Label>Major / Field</Form.Label>
+              <Form.Control required placeholder="Enter major or field" />
+              </Form.Group>           
+            </Col>
+          </Row>
 
-        <Form.Group className="mb-3" controlId="Role">
-          <Form.Label>Role</Form.Label>
-          <Form.Select onChange={(e:any) => setRole(e.target.value)}>
-              <option>Student</option>
-              <option>Professor</option>
-          </Form.Select>
-          <Form.Control type='radio' className="hidden" required />
-        </Form.Group>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="Bio" onChange={(e:any) => setBio(e.target.value)}>
+              <Form.Label>Bio</Form.Label>
+              <Form.Control as="textarea" rows={3} required placeholder="Enter a little about yourself" />       
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group controlId="formFile" className="mb-3">
+              <Form.Label>Upload Profile Image</Form.Label>
+              <Form.Control type="file" />
+              </Form.Group>
+            </Col>
+          </Row>
 
-        <Form.Group className="mb-3" controlId="Study" onChange={(e:any) => setMajor(e.target.value)}>
-          <Form.Label>Major / Field</Form.Label>
-          <Form.Control required placeholder="Enter major or field" />
-        </Form.Group>
+          <Row>
+            <Col>
+              <Button variant="primary" type="submit" id = "submitButton">
+              Submit
+              </Button>
+            </Col>
+          </Row>
+        </Container>
 
-        <Form.Group className="mb-3" controlId="Bio" onChange={(e:any) => setBio(e.target.value)}>
-          <Form.Label>Bio</Form.Label>
-          <Form.Control required placeholder="Enter a little about yourself" />       
-        </Form.Group>
 
-        <Form.Group className="mb-3" controlId="Email" onChange={(e:any) => setEmail(e.target.value)}>
-          <Form.Label>Email</Form.Label>
-          <Form.Control placeholder="Enter email address" />
-          <Form.Text className="text-muted">
-            We'll never share your email with anyone else.
-          </Form.Text>
-        </Form.Group>
-        
-        <Form.Group className="mb-3" controlId="Phone" onChange={(e:any) => setPhone(e.target.value)}>
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control placeholder="Enter phone number" />
-          <Form.Text className="text-muted">
-            We'll never share your number with anyone else.
-          </Form.Text>
-        </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
       </Form>
     </main>
     

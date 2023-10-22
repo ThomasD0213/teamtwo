@@ -1,0 +1,14 @@
+body {
+    text-align:center;
+    background-color: #fffaeb;
+}
+
+.col {
+    padding:10px;
+}
+
+#submitButton {
+    background-color:#ffcb2d;
+    color: #130e01;
+    border-width: 0;
+}
