@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 import sqlite3
 import json
 
@@ -38,9 +38,6 @@ def add_user():
     conn = get_db_connection()
     cursor = conn.cursor()
     profiles = cursor.execute(f'INSERT INTO profiles VALUES ({request.form['first_name']}, {request.form['last_name']}, {request.form['role']}, {request.form['major']}, {request.form['email']}, {request.form['phone']}, {request.form['pfp']})')
-    rows = cursor.fetchall()
-    columns = [col[0] for col in cursor.description]
-    data = [dict(zip(columns, row)) for row in rows]
     cursor.close()
     conn.close()
     
