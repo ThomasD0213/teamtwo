@@ -6,9 +6,12 @@ import Col from '../../../node_modules/react-bootstrap/esm/Col';
 import Form from '../../../node_modules/react-bootstrap/esm/Form';
 import InputGroup from '../../../node_modules/react-bootstrap/esm/InputGroup';
 import Row from '../../../node_modules/react-bootstrap/esm/Row';
+import React from 'react';
+import { TagsInput } from "../../../node_modules/react-tag-input-component/dist/esm/index";
 
 function FormExample() {
   const [validated, setValidated] = useState(false);
+  const [selected, setSelected] = useState([]);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -54,9 +57,23 @@ function FormExample() {
         </Form.Group>
       </Row>
       <Row className="mb-3">
-        <Form.Group as={Col} md="3" controlId="validationCustom05">
+        <Form.Group as={Col} md="4" controlId="validationCustom05">
           <Form.Label>Skills</Form.Label>
-          <Form.Control type="text" placeholder="Seperate multiple skills with a comma" required /> 
+          <TagsInput
+            value={selected}
+            onChange={setSelected}
+            name="skills"
+            placeHolder="Add a skill and press 'Enter'"  //this is probably not the 
+            onBlur={undefined} 
+            separators={undefined} 
+            disableBackspaceRemove={undefined} 
+            onExisting={undefined} 
+            onRemoved={undefined} 
+            disabled={undefined} 
+            isEditOnRemove={undefined} 
+            beforeAddValidate={undefined} 
+            onKeyUp={undefined} 
+            classNames={undefined}            />          
           {/* Instead of doing a textbox, I'd suggest a tag input but 
           from what I see there isn't a react bootstrap component 
           that we could use, so this could take some time to implement. */}
