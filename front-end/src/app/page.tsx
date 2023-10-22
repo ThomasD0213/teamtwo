@@ -10,7 +10,7 @@ export default function Home() {
     <main>
       <h1>hellooooooooooooo</h1>
 
-      <Link href='/login'>aaaa</Link>
+      <Link href='/dashboard'>aaaa</Link>
     </main>
   )
 }
