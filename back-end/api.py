@@ -33,11 +33,11 @@ def get_profile_by_id(id):
     conn.close()
     return json.dumps(data)
 
-@app.route("/addUser" methods=['POST'])
+@app.route("/addUser", methods=['POST'])
 def add_user():
     conn = get_db_connection()
     cursor = conn.cursor()
-    profiles = cursor.execute(f'INSERT INTO profiles VALUES ({request.form['first_name']}, {request.form['last_name']}, {request.form['role']}, {request.form['major']}, {request.form['email']}, {request.form['phone']}, {request.form['pfp']})')
+    profiles = cursor.execute(f"INSERT INTO profiles VALUES ({request.form['first_name']}, {request.form['last_name']}, {request.form['role']}, {request.form['major']}, {request.form['email']}, {request.form['phone']}, {request.form['pfp']})")
     cursor.close()
     conn.close()
     
