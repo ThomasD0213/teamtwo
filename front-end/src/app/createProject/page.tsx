@@ -36,26 +36,7 @@ function FormExample() {
   const [_status, setStatus] = useState("")
   const [_contact, setContact] = useState("")
 
-  let stuff = {
-    name: _name,
-    owner: _owner,
-    details: _details,
-    skills: _skills,
-    paid: _paid,
-    timeline: _timeline,
-    status: _status,
-    contact: _status
-  }
-
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
-    const [_project_name, setName] = useState("")
-    const [_owner, setOwner] = useState("")
-    const [_details, setDescription] = useState("")
-    const [_skills, setSkills] = useState("")
-    const [_paid, setPaid] = useState(0)
-    const [_timeline, setTimeline] = useState("")
-    const [_status, setStatus] = useState("")
-    const [_contact, setContact] = useState("")
 
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -64,6 +45,16 @@ function FormExample() {
     }
 
     setValidated(true);
+    let stuff = {
+      name: _name,
+      owner: _owner,
+      description: _details,
+      skills: _skills,
+      paid: _paid,
+      timeline: _timeline,
+      status: _status,
+      contact: _contact
+    }
 
     const response = await fetch('http://127.0.0.1:5000/addProject', {
       method: 'POST',
