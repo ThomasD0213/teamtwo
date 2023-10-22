@@ -7,7 +7,7 @@ import Form from '../../../node_modules/react-bootstrap/esm/Form';
 import InputGroup from '../../../node_modules/react-bootstrap/esm/InputGroup';
 import Row from '../../../node_modules/react-bootstrap/esm/Row';
 import React from 'react';
-import { TagsInput } from "../../../node_modules/react-tag-input-component/dist/esm/index";
+import { TagsInput } from "../../../node_modules/react-bootstrap-tagsinput/dist/index";
 
 function FormExample() {
   const [validated, setValidated] = useState(false);
