@@ -9,6 +9,7 @@ import React, { useState,  useEffect,  } from 'react';
 import {  Row, Col, ButtonToolbar, OverlayTrigger,  Tooltip, Modal, ButtonGroup } from 'react-bootstrap';
 import MyImage from './assets/images/business-working.png';
 import Image from 'next/image';
+import styles from '../global.module.css';
 
 export default function Home() {
 
@@ -46,16 +47,16 @@ export default function Home() {
   //RETURN METHOD
   return (
    
-    <div style={{height: '100vh',overflowY: 'auto',backgroundColor: '#060606',}}>
+    <div   style={{height: '100vh',overflowY: 'auto',backgroundColor: '#060606',}}>
       
       <Row xs={12} md={12} lg={12}>
   <Col xs={12} md={12} lg={12} style={{ backgroundColor: '#fffaeb', height: '18vh', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'  }}>
   <div style={{ position: 'sticky', top: '50px', right: '170vh' }}>
     <div >
-      <h1  style={{ fontSize: '4em',position: 'absolute'}}>Team 
-      <span style={{ color: '#ffcb2d', fontSize: '1em', position: 'absolute'}}>  To  
+      <h1 className= "text-color primary-text" style={{ fontSize: '4em',position: 'absolute'}}>Team 
+      <span style={{ color: '#ffcb2d', fontSize: '1em', position: 'absolute'}}>  2  
       
-      <span className={isRotating ? 'vertical-rotate' : ''} style={{ color: '#cf4307',}}>{titleWord}</span>
+      <span className={isRotating ? 'vertical-rotate' : ''} style={{ color: '#cf4307',fontFamily:'crimson-text'}}>{titleWord}</span>
       </span>
       
       </h1> 
