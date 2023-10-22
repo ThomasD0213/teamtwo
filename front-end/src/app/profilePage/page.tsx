@@ -22,7 +22,8 @@ function profile() {
                 <Col>
                 <Stack style={{backgroundColor:'#000000', color:"#FFFFFF"}}>
                 <Image style={{padding: 2 + 'em'}}alt = "Team working together" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Mona_Lisa-restored.jpg/220px-Mona_Lisa-restored.jpg"} height={225} roundedCircle id="center"/>
-                <h1><b>Mona Lisa's Profile</b></h1>
+                <h1><b>Mona Lisa</b></h1>
+                <p>University of Louvre</p>
                 </Stack>
                 </Col>
                 <Col id = "Contact">
@@ -35,12 +36,10 @@ function profile() {
             <Row>
                 <Col id = "BottomRectangle">
                     <Stack style={{backgroundColor:'#000000', color:"#FFFAEB"}}>
-                        <p style={{color:'#CF4307'}}><b>Owner</b></p>
-                        <p>Mona Lisa</p>
-                        <p style={{color:'#CF4307'}}><b>Skills Needed</b></p>
-                        <p>Mad react skills</p>
-                        <p style={{color:'#CF4307'}}><b>Project Timeline</b></p>
-                        <p>Finish by Nov 23 2023</p>
+                        <p style={{color:'#CF4307'}}><b>Role</b></p>
+                        <p>Undergraduate</p>
+                        <p style={{color:'#CF4307'}}><b>Major</b></p>
+                        <p>Studio Art</p>
                     </Stack>
                 </Col>
                 <Col id="Description">
