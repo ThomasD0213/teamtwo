@@ -1,0 +1,29 @@
+body {
+  background-color: #FFFAEB;
+  font-family: Crimson Text;
+  font-style: normal;
+  color: #000;
+  text-align: center;
+}
+#divBottom{
+    height: 600px;
+    bottom: 0;
+    max-width: fit-content;
+  background-color: black;
+}
+#addButton{
+    position: fixed;
+    bottom: 20px;
+    left: 90%;
+    background-color: #CF4307;
+    border-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+#scrollContain{
+    background-color: #060606;
+    padding: 1rem;
+    overflow-y: auto;
+}
