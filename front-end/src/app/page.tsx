@@ -12,7 +12,7 @@ import Image from 'next/image';
 
 export default function Home() {
 
-  // CONSTATNTS
+  // CONSTANTS
   const [showModal, setShowModal] = useState(false);
 
   const open = () => {
@@ -49,11 +49,12 @@ export default function Home() {
     <div style={{height: '100vh',overflowY: 'auto',backgroundColor: '#060606',}}>
       
       <Row xs={12} md={12} lg={12}>
-  <Col xs={12} md={12} lg={12} style={{ backgroundColor: '#fffaeb', height: '18vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+  <Col xs={12} md={12} lg={12} style={{ backgroundColor: '#fffaeb', height: '18vh', display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%'  }}>
   <div style={{ position: 'absolute', top: '50px', right: '170vh' }}>
     <div >
-      <h1  style={{ fontSize: '4em',position: 'absolute', alignSelf:'bottom' }}>Team 
-      <span style={{ color: '#ffcb2d', fontSize: '1em', position: 'absolute'}}>  To  
+      <h1  style={{ fontSize: '4em',position: 'fixed'}}>Team 
+      <span style={{ color: '#ffcb2d', fontSize: '1em', position: 'fixed'}}>  To  
+      
       <span className={isRotating ? 'vertical-rotate' : ''} style={{ color: '#cf4307',}}>{titleWord}</span>
       </span>
       
@@ -64,15 +65,11 @@ export default function Home() {
       </div>
     </div>
     <h1 ></h1>
-    
-    
-   
-    
-    <div style={{ position: 'absolute', top: '50px', right: '10px' }}>
-    <Button onClick={open}href='/dashboard' style={{ color: '#130e01', backgroundColor: '#ffcb2d' }}>
+    <div className='boton' style={{ position:'absolute', top: '50px', right: '10px' ,}}>
+    <Button onClick={open}href='/dashboard' style={{ color: '#130e01', backgroundColor: '#ffcb2d', borderColor:'rgba(0,0,0,0)' }}>
       LOGIN!
     </Button>
-    <Button onClick={open}href='/createProfile' style={{ color: '#130e01', backgroundColor: '#ffcb2d', margin:'5px'}}>
+    <Button onClick={open}href='/createProfile' style={{ color: '#130e01', backgroundColor:'rgba(0,0,0,0)',borderColor: '#ffcb2d',borderWidth:'3PX', margin:'5px'}}>
       SIGN UP!
     </Button>
     </div>
@@ -111,7 +108,7 @@ export default function Home() {
             </Modal> */}
       
       <Row><Col xs={6} md={5} >
-      <Image src={MyImage} alt="My Image" style={{margin:'25px',marginLeft:'50px'}}/>
+      <Image src={MyImage} alt="My Image" style={{margin:'25px',marginLeft:'25px',marginTop:'20vh'}}/>
         </Col>
         <Col xs={6} md={4} style={{margin:'8em'}}>
           {/* <h2 style={{color: '#fffaeb', fontSize: '2em'}}>TOGETHER-WE BUILD.{''}
@@ -135,19 +132,6 @@ export default function Home() {
 
 
       </div>
-    
-      
-
-
-
-   
-         
-         
-
-
-      
-
-
     
   );
     }
