@@ -7,6 +7,7 @@ import {Badge, Stack, Button, Container, Row, Col, Card, ListGroup} from "../../
 import { Dropdown, Nav, NavDropdown, NavItem, NavItemProps } from 'react-bootstrap';
 import MyCard from '../../../Components/myCard'
 import Bar from '../../../Components/bar';
+import Link from 'next/link';
 
 
 
@@ -21,22 +22,23 @@ function dashboard() {
         <div id='divBottom'>
             <div id='scrollContain'>
                 <div>
-                  <Card bg='dark' style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="../../../projectphoto.png" alt="project photo" />
+                    <Link href="/projectPage">
+                  <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="../../../hackathonpic.png" alt="hack photo" />
                     <Card.Body>
-                        <Card.Title>Marketing Project</Card.Title>
+                        <Card.Title>Hackathon 2023</Card.Title>
                         <Card.Text>
                         University of Denver
                         </Card.Text>
                     </Card.Body>
                     <ListGroup variant="dark" className="list-group-flush">
                         <ListGroup.Item className="fw-bold">Justin Denver</ListGroup.Item>
-                        <ListGroup.Item>Business Student</ListGroup.Item>
+                        <ListGroup.Item>Computer Student</ListGroup.Item>
                     </ListGroup>
                     <Card.Body>
                         <Card.Link href="#">Save</Card.Link>
                     </Card.Body>
-                    </Card> 
+                    </Card> </Link>
                 </div>
                 enim nihil quia laudantium architecto, velit blanditiis mollitia saepe repellat iste natus ipsam! Dolor repellat illo atque ut ducimus impedit similique porro. Delectus sed nihil voluptas ducimus perspiciatis. Ex cupiditate ipsum minima veritatis
             </div>
@@ -47,8 +49,45 @@ function dashboard() {
         <div id='divBottom'>
             <div id='scrollContain'>
                 <div>
-                    <MyCard />
-                    <MyCard />
+                <Row className="listed-profs">
+                    <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="../../../projectphoto.png" alt="project photo" />
+                    <Card.Body>
+                        <Card.Title>Hackathon 2023</Card.Title>
+                        <Card.Text>
+                        University of Denver
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup variant="dark" className="list-group-flush">
+                        <ListGroup.Item className="fw-bold">Justin Denver</ListGroup.Item>
+                        <ListGroup.Item>Computer Student</ListGroup.Item>
+                    </ListGroup>
+                    <Card.Body>
+                        <Card.Link href="#">Save</Card.Link>
+                    </Card.Body>
+                    </Card>  
+                <Col classname="listed-profs">
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+                    <Card.Body>
+                        <Card.Title>Card Title</Card.Title>
+                        <Card.Text>
+                        Some quick example text to build on the card title and make up the
+                        bulk of the card's content.
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                        <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                        <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                        <ListGroup.Item>Vestibulum at eros</ListGroup.Item>
+                    </ListGroup>
+                    <Card.Body>
+                        <Card.Link href="#">Card Link</Card.Link>
+                        <Card.Link href="#">Another Link</Card.Link>
+                    </Card.Body>
+                </Card>
+                </Col>
+                </Row>
                 </div>
                 enim nihil quia laudantium architecto, velit blanditiis mollitia saepe repellat iste natus ipsam! Dolor repellat illo atque ut ducimus impedit similique porro. Delectus sed nihil voluptas ducimus perspiciatis. Ex cupiditate ipsum minima veritatis
             </div>
